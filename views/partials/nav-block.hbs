@@ -1,0 +1,17 @@
+<nav>
+  <div class="nav-wrapper">
+
+    <ul class="right">
+      {{#unless user}}
+      <li><a class="modal-trigger" href="#login">Login</a></li>
+      
+      {{else}}
+      <li><i class="tiny material-icons">person</i></li>
+      <li>{{user.username}}</li>
+      <li><a href="/logout">Logout</a></li>
+      
+      {{/unless}}   
+   </ul>
+  
+  </div>
+</nav>

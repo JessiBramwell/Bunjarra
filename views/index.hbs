@@ -1,1 +1,41 @@
-<div>Welcom to Banjarra!</div>
+<div class="row">
+  <div class="articles col s8 offset-s2">
+    {{#each article}}
+
+    <ul class="article collapsible popout">
+      <li class="article-content" data-id="{{_id}}">
+
+        <div class="collapsible-header">
+          {{> article-block}}
+        </div>
+
+        <div class="article-comments collapsible-body">
+          {{#if comments}}
+
+          {{#each comments}}
+          {{> comment-block}}
+          {{/each}}
+
+          {{else}}
+          <div class="no-comment">
+            <p>No comments</p>
+          </div>
+
+          {{/if}}
+
+          <form class="comment-form" data-id="{{_id}}">
+            {{!-- <h6>{{user.username}}</h6> --}}
+            <div class="comment-input">
+              <input type="textarea" name="message">
+              <input class="btn" type="submit" value="Comment">
+            </div>
+          </form>
+        </div>
+
+      </li>
+    </ul>
+
+    {{/each}}
+
+  </div>
+</div>

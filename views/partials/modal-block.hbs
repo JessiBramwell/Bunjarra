@@ -1,0 +1,33 @@
+<!-- Modal Structure -->
+<div class="row">
+  <div id="login" class="modal col s4 offset-s2">
+    <div class="modal-content">
+
+      <ul class="tabs">
+        <li class="tab "><a class="active" href="#login-form">Login</a></li>
+        <li class="tab "><a href="#register-form">Register</a></li>
+      </ul>
+
+      <div id="login-form" class="col s12">
+        <form method="POST" action="/login">
+          <input type="text" name="username" placeholder="username">
+          <input type="password" name="password" placeholder="password">
+          <div class="modal-footer">
+            <input class="btn-flat" type="submit" value="Login">
+          </div>
+        </form>
+      </div>
+
+      <div id="register-form" class="col s12">
+        <form method="POST" action="/register">
+          <input type="text" name="username" placeholder="username">
+          <input type="password" name="password" placeholder="password">
+          <div class="modal-footer">
+            <input class="btn-flat" type="submit" value="Register">
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
