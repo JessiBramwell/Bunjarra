@@ -1,5 +1,4 @@
 // Dependencies
-require("dotenv").config();
 const express = require("express"),
   expressSession = require("express-session"),
   exphbs = require("express-handlebars"),
@@ -37,7 +36,9 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-mongoose.connect("mongodb://localhost/banjarra", { useNewUrlParser: true });
+// Mongoose connection
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhostbunjarra";
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
 
 // Routes
 require("./routes/routes.js")(app);

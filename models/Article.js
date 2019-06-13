@@ -15,10 +15,6 @@ var ArticleSchema = new Schema({
   date: {
     type: Date
   },
-  // image: {
-  //   type: String,
-  //   require: true
-  // },
   comments: [{
     type: Schema.Types.ObjectId,
     ref: "Comment"
